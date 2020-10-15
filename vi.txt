@@ -1,0 +1,4 @@
+lang_login	=Đăng Nhập
+lang_register	=Đăng Kí
+lang_click	=Nhấn vào
+lang_more	=Nhiều hơn
