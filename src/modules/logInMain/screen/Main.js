@@ -8,6 +8,7 @@ import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome';
 const {StoreDefine} = require("../redux/Redux");
 const ToolBar = require("../../../common/component/Toolbar").default;
 const Indicator = require("../../../common/component/Indicator").default;
+const Marker = require("../../../common/component/Marker").default
 
 const commonStyles = require("../../../common/style/index").default;
 const styles = require("../style/styles").default;
@@ -43,6 +44,7 @@ class MainLogInCom extends Component{
               <View 
                 style={commonStyles.formContainer}
               >
+                <Marker/>
                 <TextInput
                   style={[styles.element, styles.input]}
                   onChangeText={(text)=>{

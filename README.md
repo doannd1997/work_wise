@@ -11,7 +11,7 @@
 ## Prepare & Install
 - Clone project and go to root directory
 - [command] npm install
-- [command] cd android && chmod +x ./gradlew clean
+- [command] cd android && chmod +x ./gradlew
 ## Run
 - [command] ./android/gradlew clean (optional)
 - [command] npx react-native start --reset-cache

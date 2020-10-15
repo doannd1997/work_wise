@@ -270,5 +270,13 @@ export default (styles = EStyleSheet.create({
     height: "220rem",
     elevation: ELEVATION,
     borderRadius: "3rem"
+  },
+  marker: {
+    position: "absolute",
+    top: 0,
+    left: "12rem",
+    width: "16rem",
+    aspectRatio: 1,
+    alignItems: "center"
   }
 }));
