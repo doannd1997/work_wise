@@ -64,6 +64,7 @@ class MainLogInCom extends Component{
                   placeholder={global.localization.getLang("lang_password")}
                   secureTextEntry={true}
                 />
+                <View style={styles.padder}/>
                 <TouchableOpacity
                   style={[styles.element, styles.button]}
                   onPress={() => {

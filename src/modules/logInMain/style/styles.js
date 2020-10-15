@@ -16,6 +16,9 @@ export default styles = EStyleSheet.create({
         borderBottomWidth: "0.3rem",
         borderRadius: "2rem"
     },
+    padder: {
+        height: "15rem"
+    },
     button: {
         height: "20rem",
         alignItems: "center",
