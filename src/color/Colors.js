@@ -1,8 +1,10 @@
 const DARK_BLUE = '#1590d4'
 const WHITE = '#fff'
+const BLACK = '#000'
 const DARK_CYBER_GREY = '#123'
 const HOLO_BLUE = '#5dd8fc'
 const LIGHT_GREY = 'rgb(240, 240, 240)'
+const MIDDLE_GREY = 'rgb(180, 180, 180)'
 const GREY = 'grey'
 
 export default color = {
@@ -31,5 +33,9 @@ export default color = {
     avatarBG: WHITE,
 
     ownerTitle: DARK_CYBER_GREY,
-    postedTime: GREY
+    postedTime: GREY,
+    contentText: BLACK,
+    likeCount: MIDDLE_GREY,
+    commen: MIDDLE_GREY,
+    border: MIDDLE_GREY
 }

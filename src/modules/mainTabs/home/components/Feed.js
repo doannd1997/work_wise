@@ -3,20 +3,28 @@ import {View, Image, Text, TouchableOpacity} from 'react-native'
 
 const commonStyles = require("../../../../common/style/index").default
 const styles = require("../style/styles").default
+const ImageContainer = require("./ImageSlider").default
+const ContentText = require("./ContentText").default
+const Interation = require("./Interation").default
+
+import {QuickToast} from "../../../../utils/Toast"
+
 
 export default function Feed (props){
-    console.log(props)
     return (
         <View style={[styles.feed]}>
-            <View 
+            <TouchableOpacity 
                 style={[styles.ownerContainer]}
+                onPress={()=>{
+                    QuickToast.show(props.ownerName)
+                }}
             >
-                <TouchableOpacity style={[styles.avatarContainer]}>
+                <View style={[styles.avatarContainer]}>
                     <Image style={[styles.ownerAvatar]}
                         source={require("../../../../../res/image/HomeScreen/user.png")}
                         resizeMethod={'resize'}
                     />
-                </TouchableOpacity>
+                </View>
                 <View style={[styles.ownerNameContainer]}>
                     <Text
                         style={styles.ownerNameTxt}
@@ -29,10 +37,15 @@ export default function Feed (props){
                         {props.postedTime}
                     </Text>
                 </View>
-            </View>
-            <View>
-
-            </View>
+            </TouchableOpacity>
+            {
+                props.imageSrc.length > 0 ?
+                <ImageContainer {... {imgsSrc: props.imageSrc}}>
+                </ImageContainer>
+                : null
+            }
+            <ContentText content={props.content}/>
+            <Interation {...props}/>
         </View>
     )
 }

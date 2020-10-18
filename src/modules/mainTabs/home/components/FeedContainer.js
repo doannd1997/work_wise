@@ -39,13 +39,15 @@ const dataList = [
   {
     id: 1,
     imageSrc: [
-
+      "http://www.jamrecruitment.co.uk/blog/wp-content/uploads/2019/06/engineering-blog-image.png",
+      "https://online-engineering.case.edu/user/pages/09.blog/how-to-become-an-engineer/Case-Howtobecomeanengineerbackground.jpg",
+      "https://ichef.bbci.co.uk/images/ic/832xn/p078qlfn.jpg"
     ],
-    content: "Your image should start downloading, ",
+    content: "Carrieer Info:\n*Salary: $xxx xxxxxx xxxxxx xxxxxxx xxxxxxxx xxxxxx\n     Condition 1\n     Condition 2\n     Condition 3\n     Condition 4",
     like: 123,
     comment: 123,
     ownerId: 0,
-    ownerName: "Owner 0",
+    ownerName: "Owner 1",
     avatar: '',
     postedTime: '19/10/2020 15:34'
   },
@@ -58,7 +60,22 @@ const dataList = [
     like: 345,
     comment: 345,
     ownwerId: 0,
-    ownerName: "Owner 1",
+    ownerName: "Owner 2",
+    avatar: '',
+    postedTime: '19/10/2020 15:34'
+  },
+  {
+    id: 3,
+    imageSrc: [
+      "http://www.jamrecruitment.co.uk/blog/wp-content/uploads/2019/06/engineering-blog-image.png",
+      "https://online-engineering.case.edu/user/pages/09.blog/how-to-become-an-engineer/Case-Howtobecomeanengineerbackground.jpg",
+      "https://ichef.bbci.co.uk/images/ic/832xn/p078qlfn.jpg"
+    ],
+    content: "Your image should start downloading, ",
+    like: 345,
+    comment: 345,
+    ownwerId: 0,
+    ownerName: "Owner 3",
     avatar: '',
     postedTime: '19/10/2020 15:34'
   },

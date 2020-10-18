@@ -10,8 +10,6 @@ const colors = require("../../color/Colors").default;
 
 const ToolBar = function(props){
     var navagation = useNavigation();
-    console.log("#")
-    console.log(props)
     return (
       <LinearGradient
         style={[commonStyles.toolBar]}
