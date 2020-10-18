@@ -1,0 +1,2 @@
+python exportLocalize.py
+pause

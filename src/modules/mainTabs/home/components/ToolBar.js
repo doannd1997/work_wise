@@ -9,7 +9,7 @@ const commonStyles = require("../../../../common/style/index").default;
 const styles = require("../style/styles").default;
 const colors = require("../../../../color/Colors").default;
 
-const ToolBar = props=>{
+const _ToolBar = props=>{
     const route = useRoute();
     // if (route.params != undefined && route.params.logedIn === true)
     //   props.dispatch({type: "LOG_IN"})
@@ -47,6 +47,28 @@ const ToolBar = props=>{
         </LinearGradient>
       </View>
     );
+}
+
+const ToolBar = props=>{
+  const route = useRoute();
+  // if (route.params != undefined && route.params.logedIn === true)
+  //   props.dispatch({type: "LOG_IN"})
+  
+  const navigation = useNavigation();
+  return (
+    <View style={commonStyles.toolBar}>
+      <LinearGradient
+        style={commonStyles.gradientToolBar}
+        colors={[colors.theme, colors.theme]}
+        // start={[0, 0.65]}
+        start={{x: 0, y: 0.65}}
+        end={{x: 1, y: 0}}>
+          <Text>
+            
+          </Text>
+      </LinearGradient>
+    </View>
+  );
 }
 
 const mapStateToProps = state => ({

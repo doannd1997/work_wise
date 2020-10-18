@@ -141,5 +141,8 @@
     "lang_system_noti_header": "Thông báo hệ thống",
     "lang_noti_register_off_date_valid": "Vui lòng chọn ngày nghỉ hợp lệ",
     "lang_history_event_header": "Thông báo hệ thống",
-    "lang_history_event_content": "Học sinh mới lên xuống xe hoặc nghỉ xe, vui lòng kiểm tra"
+    "lang_history_event_content": "Học sinh mới lên xuống xe hoặc nghỉ xe, vui lòng kiểm tra",
+    "lang_feed": "Bảng Tin",
+    "lang_profile": "Tài Khoản",
+    "lang_following": "Theo dõi"
 }

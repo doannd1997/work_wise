@@ -10,6 +10,8 @@ const colors = require("../../color/Colors").default;
 
 const ToolBar = function(props){
     var navagation = useNavigation();
+    console.log("#")
+    console.log(props)
     return (
       <LinearGradient
         style={[commonStyles.toolBar]}
@@ -20,17 +22,21 @@ const ToolBar = function(props){
           <Text style={[commonStyles.toolBarTitle]}>
             {global.localization.getLang(props.params.title)}
           </Text>
-          <TouchableOpacity style={commonStyles.toolBarBtnBack}
-            onPress={()=>{
-                navagation.navigate(props.params.navigation)
-            }}
-          >
-            <Image
-              style={[commonStyles.fullBtn]}
-              source={require('../../../res/image/control/close_128_333.png')}
-              resizeMethod={"scale"}
-            />
-          </TouchableOpacity>
+          {props.params.exitable === true ?
+            <TouchableOpacity style={commonStyles.toolBarBtnBack}
+              onPress={()=>{
+                  navagation.navigate(props.params.navigation)
+              }}
+            >
+              <Image
+                style={[commonStyles.fullBtn]}
+                source={require('../../../res/image/control/close_128_333.png')}
+                resizeMethod={"scale"}
+              />
+            </TouchableOpacity>
+            : null  
+        }
+          
         </View>
       </LinearGradient>
     );

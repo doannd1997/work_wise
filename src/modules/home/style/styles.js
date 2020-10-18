@@ -9,7 +9,7 @@ export default styles = EStyleSheet.create({
 
     },
     tabBar: {
-        height: "18rem",
+        height: "21rem",
         backgroundColor: "#fff"
     },
     bagdeMail: {

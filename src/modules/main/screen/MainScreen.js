@@ -26,16 +26,16 @@ class App extends Component{
           <NavigationContainer>
             <Stack.Navigator mode="modal" headerMode="none">
               <Stack.Screen
-                name="HomeScreen"
-                component={HomeScreen}
+                name="MainLogin"
+                component={MainLogin}
                 navigationOptions={{
                   tabBarVisible: false,
                 }}
                 // options = { {title: "Màn hình chính"} }
               />
               <Stack.Screen
-                name="MainLogin"
-                component={MainLogin}
+                name="HomeScreen"
+                component={HomeScreen}
                 // options = { {title: "Màn hình đăng nhập"} }
               />
               <Stack.Screen
@@ -172,3 +172,16 @@ const mapStateToProps = (state)=>{
 }
 
 export default App;
+
+
+const config = {
+    animation: 'spring',
+    config: {
+      stiffness: 1000,
+      damping: 500,
+      mass: 3,
+      overshootClamping: true,
+      restDisplacementThreshold: 0.01,
+      restSpeedThreshold: 0.01,
+    },
+  };

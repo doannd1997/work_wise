@@ -2,23 +2,20 @@ import React, {Component} from "react";
 import {View, Text, Image, FlatList, Alert} from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { connect } from 'react-redux';
-
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 const commonStyles = require("../../../../common/style/index").default;
 const styles = require("../style/styles").default;
 
-const ToolBar = require("../components/ToolBar").default;
-const Gridder = require("../components/Gridder").default;
+const FeedContainer = require("../components/FeedContainer").default;
+const _ToolBar = require("../../../../common/component/Toolbar").default
 
 class HomeScreenCom extends Component{
-    constructor(props){
-        super(props);
-    }
     render(){
         return (
             <View style={commonStyles.fullViewVerticalTopDown}>
-                <ToolBar/>
-                <Gridder/>
+                <_ToolBar params={{title: "lang_feed"}}/>
+                <FeedContainer/>
             </View>
         )
     }

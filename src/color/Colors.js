@@ -1,7 +1,12 @@
+const DARK_BLUE = '#1590d4'
+const WHITE = '#fff'
+const DARK_CYBER_GREY = '#123'
+const HOLO_BLUE = '#5dd8fc'
+
 export default color = {
-    theme: "#fff",
+    theme: WHITE,
     theme2: 'rgb(248, 248, 248)',
-    commonButton: "#5dd8fc",
+    commonButton: DARK_BLUE,
     trackingInfoIcon: "#f58d1d",
     trackingDivInfo: "#ffffff",
     thickTheme: "#001869",
@@ -14,5 +19,10 @@ export default color = {
     screenBg: "#eee",
     remove: "#941616",
 
-    toolBar: "#fff"
+    toolBar: WHITE,
+
+    black: "#000",
+    darkGrey: '#444',
+    tabTintColor: DARK_BLUE,
+    toolBarTitle: DARK_CYBER_GREY
 }

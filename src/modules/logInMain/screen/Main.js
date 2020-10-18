@@ -39,7 +39,7 @@ class MainLogInCom extends Component{
         var self = this;
         return (
           <View style={[commonStyles.fullViewVerticalCenter, commonStyles.screenWithToolBar]}>
-            <ToolBar params={{navigation: "HomeScreen", title: "lang_login"}}/>
+            <ToolBar params={{exitable: true, navigation: "HomeScreen", title: "lang_login"}}/>
             <View style={[commonStyles.fullViewVerticalCenter]}>
               <View 
                 style={commonStyles.formContainer}

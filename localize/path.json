@@ -1,0 +1,5 @@
+{
+    "in": "localize.xlsx",
+    "out": "../res/localize/current/",
+    "outOldPath": "../old"
+}

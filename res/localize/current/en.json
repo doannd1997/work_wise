@@ -141,5 +141,8 @@
     "lang_system_noti_header": "System notification",
     "lang_noti_register_off_date_valid": "Please select date valid",
     "lang_history_event_header": "System notification",
-    "lang_history_event_content": "Student just take off or drop down"
+    "lang_history_event_content": "Student just take off or drop down",
+    "lang_feed": "NEWS Feed",
+    "lang_profile": "Profile",
+    "lang_following": "Follow"
 }

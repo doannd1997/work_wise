@@ -3,7 +3,7 @@ import { Text, View, SafeAreaView } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Badge } from 'native-base';
 import { useIsFocused } from '@react-navigation/native';
-import Icon from 'react-native-vector-icons/FontAwesome';
+import Icon from 'react-native-vector-icons/FontAwesome5';
 import { Provider } from "react-redux";
 import store from '../redux/Redux';
 
@@ -22,7 +22,7 @@ function Home(props) {
   );
 }
 
-function History() {
+function Folowing() {
   return (
     <HistoryComponent style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
     </HistoryComponent>
@@ -76,29 +76,29 @@ export default class HomeScreen extends Component {
           <Tab.Navigator
             initialRouteName="Home"
             tabBarOptions={{
-              activeTintColor: colors.theme2,
+              activeTintColor: colors.tabTintColor,
               allowFontScaling: true,
               labelStyle: styles.tabLbl,
-              style: styles.tabBar
+              style: styles.tabBar,
             }}
             >
             <Tab.Screen
               name="Home"
               component={Home}
               options={{
-                tabBarLabel: global.localization.getLang("lang_tab_home"),
+                tabBarLabel: global.localization.getLang("lang_feed"),
                 tabBarIcon: ({color, size}) => (
-                  <Icon name="home" size={size} color={color} />
+                  <Icon name="columns" size={size} color={color} />
                 ),
               }}
             />
             <Tab.Screen
-              name="History"
-              component={History}
+              name="Folowing"
+              component={Folowing}
               options={{
-                tabBarLabel: global.localization.getLang("lang_tab_history"),
+                tabBarLabel: global.localization.getLang("lang_following"),
                 tabBarIcon: ({color, size}) => (
-                  <Icon name="list" size={size} color={color} />
+                  <Icon name="store" size={size} color={color} />
                 ),
               }}
             />
@@ -118,9 +118,9 @@ export default class HomeScreen extends Component {
               name="Account"
               component={Account}
               options={{
-                tabBarLabel: global.localization.getLang("lang_tab_account"),
+                tabBarLabel: global.localization.getLang("lang_profile"),
                 tabBarIcon: ({color, size}) => (
-                  <Icon name="user" size={size} color={color} />
+                  <Icon name="address-card" size={size} color={color} />
                 ),
               }}
             />

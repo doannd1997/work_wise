@@ -143,7 +143,7 @@ export default (styles = EStyleSheet.create({
     alignItems: 'center',
   },
   toolBarTitle: {
-    color: '#000',
+    color: colors.toolBarTitle,
     fontWeight: 'bold',
     fontSize: "8rem",
   },
