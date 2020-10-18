@@ -36,6 +36,7 @@ exports.networkRequestPost = (url, params, token, successCallback, failCalllback
                     }
                     break
                 case 408:
+                case 400:
                 case 204:
                     if (typeof failCalllback == 'function'){
                         failCalllback();
@@ -89,7 +90,8 @@ exports.netWorkRequestSinglePost = (url, params, token, successCallback, failCal
 }
 
 exports.createUrl = (field, options)=>{
-    var url = netConf.protocol + "://" + netConf.ip + ":" + netConf.port + "/" + field;
+    // var url = netConf.protocol + "://" + netConf.ip + ":" + netConf.port + "/" + field;
+    var url = netConf.protocol + "://" + netConf.ip + "/" + field;
     if (typeof options == 'object' && Object.keys(options).length > 0){
         var extras = []
         for (var o in options){

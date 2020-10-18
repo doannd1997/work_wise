@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import {View, Text, TextInput, FlatList, Alert} from "react-native";
+import {View, Text, TextInput, FlatList, Alert, Linking} from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { connect } from 'react-redux';
 import {withNavigation} from "react-navigation"
@@ -90,9 +90,7 @@ class MainLogInCom extends Component{
                 <TouchableOpacity
                   style={[styles.element, styles.button]}
                   onPress={() => {
-                    self.props.navigation.navigate('GetInfoLogin', {
-                      
-                    });
+                    Linking.openURL("http://comicv.xyz/register")
                   }}>
                   <Text
                     style={[

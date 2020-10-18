@@ -14,21 +14,22 @@ export default Networking = {
         networkRequestPost(url, params, null, async (responseText, responseHeader)=>{
             if (typeof resultCallback == 'function')
                 resultCallback();
+            console.log("login response", JSON.stringify(responseText))
             var json = JSON.parse(responseText)
-            global.accountData.setAccount(json)
-            global.routeData.setRoute(json.lstRoutes)
+            // global.accountData.setAccount(json)
+            // global.routeData.setRoute(json.lstRoutes)
 
-            global.authenData.setToken(getAccessToken(responseHeader))
-            this.apiGetGuardiansInfo()
-            this.apiGetStudentStatus()
-            this.apiGetRegisterInfo()
+            global.authenData.setToken(getAccessToken(json["token"]))
+            // this.apiGetGuardiansInfo()
+            // this.apiGetStudentStatus()
+            // this.apiGetRegisterInfo()
             
-            global.firebase.start()
-            global.scheduler.start()
+            // global.firebase.start()
+            // global.scheduler.start()
             
             props.navigation.navigate("HomeScreen", {logedIn: true})
-            await global.authenData.setPhoneNumber(props.phoneNumber)
-            await global.authenData.setPassword(props.password)
+            // await global.authenData.setPhoneNumber(props.phoneNumber)
+            // await global.authenData.setPassword(props.password)
         }, async ()=>{
             if (typeof resultCallback == 'function')
                 resultCallback();
@@ -83,7 +84,7 @@ export default Networking = {
 };
 
 const ROUTE = {
-    LOG_IN: "api/values/ParentAppLogin",
+    LOG_IN: "api/auth",
     GET_GUARDIANS: "api/values/GetListSupervisorbyParent",
     GET_STUDENT_STATUS: "api/values/GetStudentStatus"
 }

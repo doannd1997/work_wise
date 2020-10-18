@@ -6,6 +6,7 @@ const HOLO_BLUE = '#5dd8fc'
 const LIGHT_GREY = 'rgb(240, 240, 240)'
 const MIDDLE_GREY = 'rgb(180, 180, 180)'
 const GREY = 'grey'
+const DARK_GREY = '#777'
 
 export default color = {
     theme: WHITE,
@@ -34,7 +35,7 @@ export default color = {
 
     ownerTitle: DARK_CYBER_GREY,
     postedTime: GREY,
-    contentText: BLACK,
+    contentText: DARK_GREY,
     likeCount: MIDDLE_GREY,
     commen: MIDDLE_GREY,
     border: MIDDLE_GREY
