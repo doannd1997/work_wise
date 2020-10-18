@@ -38,5 +38,6 @@ export default color = {
     contentText: DARK_GREY,
     likeCount: MIDDLE_GREY,
     commen: MIDDLE_GREY,
-    border: MIDDLE_GREY
+    border: MIDDLE_GREY,
+    follow: DARK_GREY
 }

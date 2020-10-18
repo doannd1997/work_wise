@@ -16,14 +16,10 @@ class Account extends Component{
   }
     render(){
         return (
-          <View style={[commonStyles.fullViewVerticalCenter, {backgroundColor: "cyan"}]}>
-            {this.props.logedIn ? (
+          <View style={[commonStyles.fullViewVerticalCenter]}>
               <AccountComponent
                 style={commonStyles.fullViewVerticalCenter}
               />
-            ) : (
-              <NotLogInCom style={[commonStyles.fullViewVerticalCenter, {backgroundColor: "red"}]}/>
-            )}
           </View>
         );
     }
