@@ -9,6 +9,7 @@ const styles = require("../style/styles").default;
 
 const FeedContainer = require("../components/FeedContainer").default;
 const _ToolBar = require("../../../../common/component/Toolbar").default
+// const _ToolBar = require("../components/ToolBar").default
 
 class HomeScreenCom extends Component{
     render(){

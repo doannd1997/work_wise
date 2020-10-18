@@ -2,10 +2,12 @@ const DARK_BLUE = '#1590d4'
 const WHITE = '#fff'
 const DARK_CYBER_GREY = '#123'
 const HOLO_BLUE = '#5dd8fc'
+const LIGHT_GREY = 'rgb(240, 240, 240)'
+const GREY = 'grey'
 
 export default color = {
     theme: WHITE,
-    theme2: 'rgb(248, 248, 248)',
+    theme2: LIGHT_GREY,
     commonButton: DARK_BLUE,
     trackingInfoIcon: "#f58d1d",
     trackingDivInfo: "#ffffff",
@@ -24,5 +26,10 @@ export default color = {
     black: "#000",
     darkGrey: '#444',
     tabTintColor: DARK_BLUE,
-    toolBarTitle: DARK_CYBER_GREY
+    toolBarTitle: DARK_CYBER_GREY,
+    avatarBorder: LIGHT_GREY,
+    avatarBG: WHITE,
+
+    ownerTitle: DARK_CYBER_GREY,
+    postedTime: GREY
 }

@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import {View, Text, Image, FlatList, Alert} from "react-native";
+import {View, Text, Image, FlatList, Alert, BackHandler} from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { useRoute, useNavigation } from '@react-navigation/native';
 import LinearGradient from "react-native-linear-gradient"
@@ -49,25 +49,27 @@ const _ToolBar = props=>{
     );
 }
 
-const ToolBar = props=>{
-  const route = useRoute();
-  // if (route.params != undefined && route.params.logedIn === true)
-  //   props.dispatch({type: "LOG_IN"})
-  
-  const navigation = useNavigation();
+const ToolBar = function(props){
+  var navagation = useNavigation();
+  console.log("#")
+  console.log(props)
   return (
-    <View style={commonStyles.toolBar}>
-      <LinearGradient
-        style={commonStyles.gradientToolBar}
-        colors={[colors.theme, colors.theme]}
-        // start={[0, 0.65]}
-        start={{x: 0, y: 0.65}}
-        end={{x: 1, y: 0}}>
-          <Text>
-            
-          </Text>
-      </LinearGradient>
-    </View>
+    <LinearGradient
+      style={[commonStyles.toolBar]}
+      colors={[colors.toolBar, colors.toolBar]}
+      start={{x: 0, y: 0.65}}
+      end={{x: 1, y: 0}}>
+      <View style={[commonStyles.fullViewVerticalCenter]}>
+          <Image
+            style={[
+              commonStyles.fitHeight,
+              {backgroundColor: "red" }
+            ]}
+            source={require('../../../../../res/image/HomeScreen/location_boy.png')}
+            resizeMethod={"scale"}
+          />
+      </View>
+    </LinearGradient>
   );
 }
 

@@ -10,6 +10,11 @@ const ELEVATION = 3
 import EStyleSheet from 'react-native-extended-stylesheet';
 
 export default (styles = EStyleSheet.create({
+  fullView: {
+    flex: 1,
+    width: "100%",
+    height: "100%"
+  },
   fullViewVerticalCenter: {
     flex: 1,
     width: '100%',
