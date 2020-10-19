@@ -279,7 +279,7 @@ export default (styles = EStyleSheet.create({
   marker: {
     position: "absolute",
     top: 0,
-    left: "12rem",
+    right: "12rem",
     width: "16rem",
     aspectRatio: 1,
     alignItems: "center"

@@ -32,6 +32,8 @@ export default color = {
     toolBarTitle: DARK_CYBER_GREY,
     avatarBorder: LIGHT_GREY,
     avatarBG: WHITE,
+    btnFollowDisable: GREY,
+    btnFollowEnable: HOLO_BLUE,
 
     ownerTitle: DARK_CYBER_GREY,
     postedTime: GREY,
@@ -39,5 +41,6 @@ export default color = {
     likeCount: MIDDLE_GREY,
     commen: MIDDLE_GREY,
     border: MIDDLE_GREY,
-    follow: DARK_GREY
+    follow: DARK_GREY,
+    inputText: LIGHT_GREY
 }

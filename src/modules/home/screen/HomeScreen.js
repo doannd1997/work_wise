@@ -11,8 +11,8 @@ const colors = require("../../../color/Colors").default;
 const styles = require("../style/styles").default;
 
 const HomeComponent = require("../../mainTabs/home/screen/HomeTab").default;
-const HistoryComponent = require("../../mainTabs/history/screen/History").default;
-const MailComponent = require("../../mainTabs/mail/screen/Mail").default;
+const FollowComponent = require("../../mainTabs/follow/screen/FollowTab").default;
+const SearchComponent = require("../../mainTabs/search/screen/ScreenSearch").default;
 const AccountComponent = require("../../mainTabs/account/screen/ScreenAccount").default;
 
 function Home(props) {
@@ -24,15 +24,15 @@ function Home(props) {
 
 function Folowing() {
   return (
-    <HistoryComponent style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-    </HistoryComponent>
+    <FollowComponent style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+    </FollowComponent>
   );
 }
 
-function Mail() {
+function Search() {
   return (
-    <MailComponent style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-    </MailComponent>
+    <SearchComponent style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+    </SearchComponent>
   );
 }
 
@@ -103,14 +103,12 @@ export default class HomeScreen extends Component {
               }}
             />
             <Tab.Screen
-              name="Mail"
-              component={Mail}
+              name="Search"
+              component={Search}
               options={{
-                tabBarLabel: global.localization.getLang("lang_tab_mail"),
+                tabBarLabel: global.localization.getLang("lang_search"),
                 tabBarIcon: ({color, size}) => (
-                  <Icon name="inbox" size={size} color={color}>
-                      {/* {getNumBadge(store)} */}
-                  </Icon>
+                  <Icon name="search" size={size} color={color} />
                 ),
               }}
             />

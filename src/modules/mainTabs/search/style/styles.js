@@ -12,8 +12,8 @@ export default EStyleSheet.create({
         width: "100%",
         flex: 1,
     },
-    infoContainer: {
-        height: "80rem",
+    searchContainer: {
+        height: "25rem",
         backgroundColor: colors.theme,
         padding: "5rem",
         alignItems: "center",
@@ -24,7 +24,7 @@ export default EStyleSheet.create({
         elevation: 2
     },
     feedContainer: {
-        flex: 3,
+        flex: 1,
         backgroundColor: colors.theme,
         padding: "5rem",
         alignItems: "center",
@@ -35,63 +35,38 @@ export default EStyleSheet.create({
         elevation: 2
     },
     avatarContainer: {
-        height: "100%",
-        width: "50rem",
-        // backgroundColor: "cyan",
-        padding: "4rem"
+        height: "80%",
+        aspectRatio: 1,
+        // backgroundColo: "cyan",
     },
     avatar: {
         borderRadius: "20rem",
     },
     nameContainer: {
-        // backgroundColor: "orange",
+        // backgroundColor: "cyan",
         flex: 1,
         height: "100%",
         alignItems: "center",
-        justifyContent: "center",
+        justifyContent: "flex-start",
         flexDirection: "column",
-        paddingLeft: "3rem",
+        paddingLeft: "3rem"
     },
     txtName: {
         width: "100%",
-        // flex: 1.8,
+        flex: 1.8,
         textAlignVertical: "center",
-        fontSize: "10rem",
+        fontSize: "8rem",
         fontWeight: "bold",
-        color: colors.ownerTitle,
-        height: "20rem",
-        // backgroundColor: "cyan"
+        color: colors.ownerTitle
     },
     txtFollow: {
         width: "100%",
-        // flex: 1,
+        flex: 1,
         textAlignVertical: "top",
-        color: colors.follow,
-        height: "15rem",
-        textAlignVertical: "center",
-        // backgroundColor: "red",
-        fontSize: "6rem"
+        fontSize: "5rem",
+        color: colors.follow
     },
     profileContainer: {
         backgroundColor: colors.theme2
-    },
-    btnContainer: {
-        height: "25rem",
-        backgroundColor: colors.theme,
-        padding: "5rem",
-        alignItems: "center",
-        justifyContent: "flex-start",
-        flexDirection: "row",
-        margin: "2rem",
-        borderRadius: "5rem",
-        elevation: 2,
-        backgroundColor: "red",
-        justifyContent: "center",
-        alignItems: "center"
-    },
-    btnLogOut: {
-        color: "#fff",
-        fontWeight: "bold",
-        fontSize: "8rem"
     }
 })

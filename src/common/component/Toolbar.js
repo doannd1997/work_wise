@@ -9,7 +9,7 @@ const commonStyles = require("../style/index").default;
 const colors = require("../../color/Colors").default;
 
 const ToolBar = function(props){
-    var navagation = useNavigation();
+    var navigation = useNavigation();
     return (
       <LinearGradient
         style={[commonStyles.toolBar]}
@@ -23,7 +23,10 @@ const ToolBar = function(props){
           {props.params.exitable === true ?
             <TouchableOpacity style={commonStyles.toolBarBtnBack}
               onPress={()=>{
-                  navagation.navigate(props.params.navigation)
+                if (props.params.navigation == undefined)
+                  navigation.goBack()
+                else
+                  navigation.navigate(props.params.navigation)
               }}
             >
               <Image
@@ -44,5 +47,5 @@ const mapStateToProps = (state) => {
     return {}
   };
   
-export default connect(mapStateToProps)(ToolBar);
+export default (ToolBar);
 

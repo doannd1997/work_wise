@@ -144,5 +144,9 @@
     "lang_history_event_content": "Student just take off or drop down",
     "lang_feed": "NEWS Feed",
     "lang_profile": "Profile",
-    "lang_following": "Follow"
+    "lang_following": "Follow",
+    "lang_follow": "Follow",
+    "lang_followed": "Followed",
+    "lang_comment": "Comment",
+    "lang_search": "Search"
 }

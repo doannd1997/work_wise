@@ -4,15 +4,15 @@ import {connect, Provider} from "react-redux"
 import NotLogInCom from "../../../../common/component/NotLogInCom";
 import styles from "../style/styles";
 
-const AccountComponent = require("./Main").default;
+const SearchComponent = require("./Main").default;
 
 const commonStyles = require("../../../../common/style/index").default;
 
-class Account extends Component{
+class Search extends Component{
   render(){
       return (
         <View style={[commonStyles.fullViewVerticalCenter]}>
-            <AccountComponent
+            <SearchComponent
               style={commonStyles.fullViewVerticalCenter}
             />
         </View>
@@ -22,9 +22,12 @@ class Account extends Component{
 
 const mapStateToProps = (state)=>{
     return {
-      ...state
+        logedIn: state.logedIn,
+        curTab: state.curTab,
+        parentAvatar: state.parentAvatar,
+        parentName: state.parentName
     }
 }
 
-export default connect(mapStateToProps)(Account);
+export default connect(mapStateToProps)(Search);
 

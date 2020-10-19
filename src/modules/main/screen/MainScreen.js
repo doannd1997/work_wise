@@ -6,13 +6,8 @@ const Stack = createStackNavigator();
 
 const HomeScreenComponent = require("../../home/screen/HomeScreen").default;
 const MainLogInComponent = require("../../logInMain/screen/LogInScreen").default;
-const GetInfoLogInComponent = require("../../logInGetInfo/screen/GetInfoLogInScreen").default;
-const ForgetPasswordComponent = require("../../logInForgetPassword/screen/ForgetPasswordScreen").default;
-const ChildrenTrackingComponent = require("../../childrenTracking/screen/ChildrenTracking").default;
-const ReportAbsenceComponent = require("../../reportAbsence/screen/ReportAbsence").default;
-const RegisterServiceComponent = require("../../registerService/screen/RegisterServiceComponent").default;
-const ChangeServiceComponent = require("../../changeService/screen/ChangeServiceComponent").default;
-const RegisterGuardiansComponent = require("../../registerGuardians/screen/RegisterGuardians").default;
+const ProfileComponent = require("../../profile/screen/Profile").default
+const CommentComponent = require("../../comment/screen/Comment").default
 
 const colors = require("../../../color/Colors").default;
 
@@ -39,34 +34,12 @@ class App extends Component{
                 // options = { {title: "Màn hình đăng nhập"} }
               />
               <Stack.Screen
-                name="GetInfoLogin"
-                component={GetInfoLogin}
-                // options = { {title: "Màn hình lấy thông tin đăng nhập"} }
+                name="Profile"
+                component={Profile}
               />
               <Stack.Screen
-                name="FogetPassword"
-                component={ForgetPassword}
-                // options = { {title: "Màn hình quên mật khẩu"} }
-              />
-              <Stack.Screen
-                name="ChildrenTracking"
-                component={ChildrenTracking}
-              />
-              <Stack.Screen
-                name="ReportAbsence"
-                component={ReportAbsence}
-              />
-              <Stack.Screen
-                name="RegisterService"
-                component={RegisterService}
-              />
-              <Stack.Screen
-                name="ChangeService"
-                component={ChangeService}
-              />
-              <Stack.Screen
-                name="RegisterGuardians"
-                component={RegisterGuardians}
+                name="Comment"
+                component={Comment}
               />
             </Stack.Navigator>
           </NavigationContainer>
@@ -79,6 +52,7 @@ class App extends Component{
 
 
 function HomeScreen({ route, navigation }){
+    global.navigation = navigation
     return (
         <View style={styles.fullScreen}>
             <HomeScreenComponent route={route} navigation={navigation}></HomeScreenComponent>
@@ -87,6 +61,7 @@ function HomeScreen({ route, navigation }){
 };
 
 function MainLogin({route, navigation}){
+    global.navigation = navigation
     return (
         <View style={styles.fullScreen}>
             <MainLogInComponent route={route} navigation={navigation}></MainLogInComponent>
@@ -94,58 +69,20 @@ function MainLogin({route, navigation}){
     )
 }
 
-function GetInfoLogin({route, navigation}){
-    return (
-        <View style={styles.fullScreen}>
-            <GetInfoLogInComponent route={route} navigation={navigation}></GetInfoLogInComponent>
-        </View>
-    )
-}
-
-function ForgetPassword({route, navigation}){
-    return (
-        <View style={styles.fullScreen}>
-            <ForgetPasswordComponent route={route} navigation={navigation}></ForgetPasswordComponent>
-        </View>
-    )
-}
-
-function ChildrenTracking({route, navigation}){
-   return (
-        <View style={styles.fullScreen}>
-            <ChildrenTrackingComponent route={route} navigation={navigation}></ChildrenTrackingComponent>
-        </View>
-    )
-}
-
-function ReportAbsence({route, navigation}){
+function Profile({route, navigation}){
+    global.navigation = navigation
     return (
         <View style={[styles.fullScreen]}>
-            <ReportAbsenceComponent route={route} navigation={navigation}></ReportAbsenceComponent>
+            <ProfileComponent route={route} navigation={navigation}></ProfileComponent>
         </View>
     )
 }
 
-function RegisterService({route, navigation}){
+function Comment({route, navigation}){
+    global.navigation = navigation
     return (
         <View style={[styles.fullScreen]}>
-            <RegisterServiceComponent route={route} navigation={navigation}></RegisterServiceComponent>
-        </View>
-    )
-}
-
-function ChangeService({route, navigation}){
-    return (
-        <View style={[styles.fullScreen]}>
-            <ChangeServiceComponent route={route} navigation={navigation}></ChangeServiceComponent>
-        </View>
-    )
-}
-
-function RegisterGuardians({route, navigation}){
-    return (
-        <View style={[styles.fullScreen]}>
-            <RegisterGuardiansComponent route={route} navigation={navigation}></RegisterGuardiansComponent>
+            <CommentComponent route={route} navigation={navigation}></CommentComponent>
         </View>
     )
 }

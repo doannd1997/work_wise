@@ -144,5 +144,9 @@
     "lang_history_event_content": "Học sinh mới lên xuống xe hoặc nghỉ xe, vui lòng kiểm tra",
     "lang_feed": "Bảng Tin",
     "lang_profile": "Tài Khoản",
-    "lang_following": "Theo dõi"
+    "lang_following": "Theo dõi",
+    "lang_follow": "Theo dõi",
+    "lang_followed": "Đã theo dõi",
+    "lang_comment": "Bình luận",
+    "lang_search": "Tìm kiếm địa chỉ…"
 }

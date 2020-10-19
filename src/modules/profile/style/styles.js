@@ -1,5 +1,5 @@
 import EStyleSheet from "react-native-extended-stylesheet"
-const colors = require("../../../../color/Colors").default;
+const colors = require("../../../color/Colors").default;
 import {StyleSheet } from 'react-native'
 
 export default EStyleSheet.create({
@@ -8,12 +8,9 @@ export default EStyleSheet.create({
         flex: 1,
         flexDirection: "column"
     },
-    coverContainer: {
-        width: "100%",
-        flex: 1,
-    },
+
     infoContainer: {
-        height: "80rem",
+        height: "100rem",
         backgroundColor: colors.theme,
         padding: "5rem",
         alignItems: "center",
@@ -24,12 +21,12 @@ export default EStyleSheet.create({
         elevation: 2
     },
     feedContainer: {
-        flex: 3,
+        flex: 1,
         backgroundColor: colors.theme,
         padding: "5rem",
         alignItems: "center",
-        justifyContent: "flex-start",
-        flexDirection: "row",
+        justifyContent: "center",
+        flexDirection: "column",
         margin: "2rem",
         borderRadius: "5rem",
         elevation: 2
@@ -75,23 +72,39 @@ export default EStyleSheet.create({
     profileContainer: {
         backgroundColor: colors.theme2
     },
-    btnContainer: {
-        height: "25rem",
-        backgroundColor: colors.theme,
-        padding: "5rem",
+    followContainer: {
+        // height: "100%",
+        // flex: 0.8,
+        // backgroundColor: "cyan",
+        justifyContent: "center",
         alignItems: "center",
-        justifyContent: "flex-start",
-        flexDirection: "row",
-        margin: "2rem",
-        borderRadius: "5rem",
-        elevation: 2,
-        backgroundColor: "red",
+        position: "absolute",
+        bottom: 0,
+        alignSelf: "center"
+    },
+    btnFollowDefault: {
+        width: "40rem",
+        height: "14.5rem",
+        borderRadius: "2rem",
         justifyContent: "center",
         alignItems: "center"
     },
-    btnLogOut: {
-        color: "#fff",
+    btnToFollow: {
+        borderColor: colors.btnFollowDisable,
+        borderWidth: "1rem"
+    },
+    btnToUnfollow: {
+        backgroundColor: colors.btnFollowEnable
+    },
+    txtFollowDefault: {
+        fontSize: "8rem",
         fontWeight: "bold",
-        fontSize: "8rem"
+        fontStyle: "italic"
+    },
+    txtFollowed: {
+        color: "#fff"
+    },
+    txtNotFollowed: {
+        color: colors.btnFollowDisable
     }
 })
