@@ -5,29 +5,26 @@ import NotLogInCom from "../../../../common/component/NotLogInCom";
 import styles from "../style/styles";
 
 const SearchComponent = require("./Main").default;
-
 const commonStyles = require("../../../../common/style/index").default;
+
+import {store} from "../redux/redux"
 
 class Search extends Component{
   render(){
       return (
-        <View style={[commonStyles.fullViewVerticalCenter]}>
-            <SearchComponent
-              style={commonStyles.fullViewVerticalCenter}
-            />
-        </View>
+        <Provider
+          store = {store}
+        >
+          <View style={[commonStyles.fullViewVerticalCenter]}>
+              <SearchComponent
+                style={commonStyles.fullViewVerticalCenter}
+              />
+          </View>
+        </Provider>
       );
   }
 }
 
-const mapStateToProps = (state)=>{
-    return {
-        logedIn: state.logedIn,
-        curTab: state.curTab,
-        parentAvatar: state.parentAvatar,
-        parentName: state.parentName
-    }
-}
 
-export default connect(mapStateToProps)(Search);
+export default Search
 

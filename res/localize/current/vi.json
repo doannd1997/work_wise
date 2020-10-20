@@ -146,7 +146,10 @@
     "lang_profile": "Tài Khoản",
     "lang_following": "Theo dõi",
     "lang_follow": "Theo dõi",
+    "lang_unfollow": "Bỏ theo dõi",
     "lang_followed": "Đã theo dõi",
     "lang_comment": "Bình luận",
-    "lang_search": "Tìm kiếm địa chỉ…"
+    "lang_search": "Tìm kiếm địa chỉ…",
+    "lang_userName": "Tên tài khoản",
+    "lang_viewMore": "Xem thêm…"
 }

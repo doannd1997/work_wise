@@ -15,7 +15,7 @@ export default EStyleSheet.create({
     searchContainer: {
         height: "25rem",
         backgroundColor: colors.theme,
-        padding: "5rem",
+        padding: "1.5rem",
         alignItems: "center",
         justifyContent: "flex-start",
         flexDirection: "row",
@@ -23,7 +23,7 @@ export default EStyleSheet.create({
         borderRadius: "5rem",
         elevation: 2
     },
-    feedContainer: {
+    ownerContainer: {
         flex: 1,
         backgroundColor: colors.theme,
         padding: "5rem",
@@ -68,5 +68,33 @@ export default EStyleSheet.create({
     },
     profileContainer: {
         backgroundColor: colors.theme2
-    }
+    },
+
+    //
+    inputComment: {
+        height: "30rem",
+        backgroundColor: colors.theme,
+        alignItems: "center",
+        justifyContent: "flex-start",
+        flexDirection: "row",
+        margin: "2rem",
+        marginTop: "0rem",
+        borderRadius: "5rem",
+        elevation: 1,
+        padding: "2rem"
+    },
+    inputText: {
+        height: "100%",
+        flex: 1,
+        backgroundColor: colors.inputText,
+        borderRadius: "5rem",
+        marginRight: "2rem",
+        fontSize: "8rem",
+        paddingHorizontal: "3rem"
+    },
+    btnSearch: {
+        width: "30rem",
+        padding: "3rem",
+        // backgroundColor: "orange"
+    },
 })

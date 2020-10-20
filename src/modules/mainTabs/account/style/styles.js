@@ -84,7 +84,7 @@ export default EStyleSheet.create({
         flexDirection: "row",
         margin: "2rem",
         borderRadius: "5rem",
-        elevation: 2,
+        elevation: 1,
         backgroundColor: "red",
         justifyContent: "center",
         alignItems: "center"

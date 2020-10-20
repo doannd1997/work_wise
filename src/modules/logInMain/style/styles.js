@@ -9,13 +9,29 @@ export default styles = EStyleSheet.create({
         margin: "1rem",
         fontSize: "5rem",
         backgroundColor: "#fff",
-        fontSize: '10rem',
+        // fontSize: '10rem',
         padding: "2rem",
     },
-    input: {
-        borderBottomWidth: "0.3rem",
-        borderRadius: "2rem"
+    inputContainer: {
+        borderWidth: "0.3rem",
+        borderRadius: "2rem",
+        flexDirection: "row",
+        alignItems: "center",
+        justifyContent: "flex-start",
+        height: "25rem"
     },
+    textInput: {
+        fontSize: "7rem",
+        fontWeight: "bold",
+        // backgroundColor: "cyan",
+        flex: 1
+    },
+    imgInputContainer: {
+        height: "100%",
+        aspectRatio: 1,
+        // backgroundColor: "red",
+        padding: "4rem"
+    },  
     padder: {
         height: "15rem"
     },

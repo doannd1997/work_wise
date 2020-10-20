@@ -8,7 +8,7 @@ const styles = require("../style/styles").default
 
 export default function Interation (props){
     const [isLiked, setLiked] = useState(false);
-    const navagation = useNavigation()
+    const navigation = useNavigation()
     return (
         <View style={styles.interationContainer}
         >
@@ -23,7 +23,7 @@ export default function Interation (props){
                     style={styles.btnLike}
                 >
                     <Image 
-                        style={commonStyles.fullView}
+                        style={[commonStyles.fullView, styles.imgLike]}
                         source={isLiked ? _likedImg : _unlikedImg}
                         resizeMode="contain"
                     />
@@ -34,20 +34,32 @@ export default function Interation (props){
                     </Text>
                 </View>
             </TouchableOpacity>
-            <TouchableOpacity 
-                style={styles.commentContainer}
-                onPress={()=>{
-                    // QuickToast.show(props.ownerName)
-                    navigation.navigate("Comment", {_profile: props})
-                }}
+            <TouchableOpacity style={styles.commentContainer}
+                onPress={
+                    ()=>{
+                        navigation.navigate("Comment", {_profile: props})
+                    }
+                }
             >
-                <Text style={styles.txtLikeCount}>
-                    Comment: 210
-                </Text>
+                <View 
+                    style={styles.btnLike}
+                >
+                    <Image 
+                        style={[commonStyles.fullView, styles.imgLike]}
+                        source={_commentImg}
+                        resizeMode="contain"
+                    />
+                </View>
+                <View style={styles.likeCountContainer}>
+                    <Text style={styles.txtLikeCount}>
+                        Comment
+                    </Text>
+                </View>
             </TouchableOpacity>
         </View>
     )
 }
 
-const _likedImg = require("../../../../../res/image/HomeScreen/like_128_blue.png")
-const _unlikedImg = require("../../../../../res/image/HomeScreen/unlike_128_grey.png")
+const _likedImg = require("../../../../../res/image/HomeScreen/heart_128_231_83_72.png")
+const _unlikedImg = require("../../../../../res/image/HomeScreen/heart_128_180_180_180.png")
+const _commentImg = require("../../../../../res/image/HomeScreen/message_128_180_180_180.png")

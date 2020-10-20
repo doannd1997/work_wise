@@ -11,6 +11,7 @@ const commonStyles = require("../../../common/style/index").default;
 
 const ToolBar = require("../../../common/component/Toolbar").default;
 const Marker = require("../../../common/component/Marker").default;
+const UserHeader = require("../../../common/component/UserHeader").default
 
 class Main extends Component{
     constructor(props){
@@ -28,46 +29,24 @@ class Main extends Component{
         return (
             <View style={[commonStyles.fullView, styles.profileContainer]}>
                 <ToolBar params={{title: "lang_profile", exitable: true}}/>
-                <View style={[styles.infoContainer]}>
-                    <View style={[styles.avatarContainer]}>
-                        <Image style={[commonStyles.fullView, styles.avatar]}
-                            source={require("../../../../res/image/HomeScreen/user.png")}
-                            resizeMode={"contain"}
-                        />
-                        <View style={[styles.followContainer]}>
-                            <TouchableOpacity 
-                                style={[styles.btnFollowDefault, _this.props.followed ? styles.btnToUnfollow : styles.btnToFollow]}
-                                onPress={()=>{
-                                    store.dispatch({type: ACTION_TYPE.TOGGLE_FOLLOW})
-                                }}
-                            >
-                                <Text
-                                    style={[styles.txtFollowDefault, _this.props.followed ? styles.txtFollowed : styles.txtNotFollowed]}
-                                >
-                                    {global.localization.getLang(this.props.followed ? "lang_followed" : "lang_follow")}
-                                </Text>
-                            </TouchableOpacity>
-                        </View>
-                        
-                    </View>
-                    <View style={styles.nameContainer}>
-                        <Text style={[styles.txtName]}>
-                            {profile.ownerName}
-                        </Text>
-                        <Text style={[styles.txtFollow]}>
-                            Following: 1K
-                        </Text>
-                        <Text style={[styles.txtFollow]}>
-                            Follower: 2K
-                        </Text>
-                    </View>
-                    <Marker/>
-                </View>
+                <UserHeader {...convertProps(profile)}/>
                 <View style={[styles.feedContainer]}>
                     <Text>
                         [FEED]
                     </Text>
                 </View>
+                <TouchableOpacity 
+                    style={[styles.btnFollowDefault, _this.props.followed ? styles.btnToUnfollow : styles.btnToFollow]}
+                    onPress={()=>{
+                        store.dispatch({type: ACTION_TYPE.TOGGLE_FOLLOW})
+                    }}
+                >
+                    <Text
+                        style={[styles.txtFollowDefault, _this.props.followed ? styles.txtFollowed : styles.txtNotFollowed]}
+                    >
+                        {global.localization.getLang(this.props.followed ? "lang_unfollow" : "lang_follow")}
+                    </Text>
+                </TouchableOpacity>
             </View>
         )
     }
@@ -80,3 +59,11 @@ const mapStateToProps = (state)=>{
 }
 
 export default connect(mapStateToProps)(Main);
+
+const convertProps = (props)=>{
+    return {
+        ...props,
+        alone: true,
+        clickable: false
+    }
+}

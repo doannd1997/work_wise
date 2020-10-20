@@ -7,16 +7,15 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 const commonStyles = require("../../../../common/style/index").default;
 const styles = require("../style/styles").default;
 
-const FeedContainer = require("../components/FeedContainer").default;
-const _ToolBar = require("../../../../common/component/Toolbar").default
-// const _ToolBar = require("../components/ToolBar").default
+const ToolBar = require("../../../../common/component/Toolbar").default
+const Store = require("../components/Store").default
 
 class FollowCom extends Component{
     render(){
         return (
             <View style={commonStyles.fullViewVerticalTopDown}>
-                <_ToolBar params={{title: "lang_follow"}}/>
-                <FeedContainer/>
+                <ToolBar params={{title: "lang_follow"}}/>
+                <Store/>
             </View>
         )
     }

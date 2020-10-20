@@ -18,7 +18,7 @@ export default EStyleSheet.create({
         flexDirection: "row",
         margin: "2rem",
         borderRadius: "5rem",
-        elevation: 2
+        elevation: 1
     },
     feedContainer: {
         flex: 1,
@@ -29,7 +29,7 @@ export default EStyleSheet.create({
         flexDirection: "column",
         margin: "2rem",
         borderRadius: "5rem",
-        elevation: 2
+        elevation: 1
     },
     avatarContainer: {
         height: "100%",
@@ -83,28 +83,29 @@ export default EStyleSheet.create({
         alignSelf: "center"
     },
     btnFollowDefault: {
-        width: "40rem",
-        height: "14.5rem",
-        borderRadius: "2rem",
+        alignSelf: "stretch",
+        height: "22rem",
         justifyContent: "center",
-        alignItems: "center"
+        alignItems: "center",
+        margin: "2rem",
+        borderRadius: "4rem",
+        elevation: 1,
     },
     btnToFollow: {
-        borderColor: colors.btnFollowDisable,
-        borderWidth: "1rem"
+        backgroundColor: colors.btnFollowEnable,
     },
     btnToUnfollow: {
-        backgroundColor: colors.btnFollowEnable
+        backgroundColor: colors.negative
     },
     txtFollowDefault: {
-        fontSize: "8rem",
+        fontSize: "9rem",
         fontWeight: "bold",
-        fontStyle: "italic"
+        fontStyle: "italic",
     },
     txtFollowed: {
         color: "#fff"
     },
     txtNotFollowed: {
-        color: colors.btnFollowDisable
+        color: "#fff"
     }
 })

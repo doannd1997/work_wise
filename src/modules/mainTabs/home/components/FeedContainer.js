@@ -23,6 +23,10 @@ const FeedContainer = props => {
             return <Feed {...item}/>
           }}
           keyExtractor={(item, index) => index.toString()}
+          onRefresh={()=>{
+            console.log("refresh")
+          }}
+          refreshing={false}
           />
       </View>
     );

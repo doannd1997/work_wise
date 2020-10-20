@@ -8,6 +8,7 @@ import { useRoute, useNavigation } from '@react-navigation/native';
 
 const styles = require("../style/styles").default;
 const commonStyles = require("../../../../common/style/index").default;
+const UserHeader = require("../../../../common/component/UserHeader").default
 
 const ToolBar = require("../../../../common/component/Toolbar").default;
 
@@ -22,27 +23,9 @@ class Main extends Component{
         return (
             <View style={[commonStyles.fullView, styles.profileContainer]}>
                 <ToolBar params={{title: "lang_profile"}}/>
-                <View style={[styles.infoContainer]}>
-                    <View style={[styles.avatarContainer]}>
-                        <Image style={[commonStyles.fullView, styles.avatar]}
-                            source={require("../../../../../res/image/HomeScreen/user.png")}
-                            resizeMode={"contain"}
-                        />
-                    </View>
-                    <View style={styles.nameContainer}>
-                        <Text style={[styles.txtName]}>
-                            DisplayName
-                        </Text>
-                        <Text style={[styles.txtFollow]}>
-                            Following: 1K
-                        </Text>
-                        <Text style={[styles.txtFollow]}>
-                            Follower: 2K
-                        </Text>
-                    </View>
-                </View>
-                <View style={[styles.feedContainer]}>
-
+                <UserHeader {...convertProps()}/>
+                <View style={[commonStyles.contentContainer]}>
+                    <Text>Notification</Text>
                 </View>
                 <TouchableOpacity 
                     style={[styles.btnContainer]}
@@ -66,3 +49,12 @@ const mapStateToProps = (state)=>{
 }
 
 export default connect(mapStateToProps)(Main);
+
+const convertProps = (props)=>{
+    return {
+        ownerName: "Nguyen Van A",
+        clickable: false,
+        alone: true,
+        extrasInfo: "Following:12K"
+    }
+}

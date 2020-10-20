@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import {View, Text, TextInput, FlatList, Alert, Linking} from "react-native";
+import {View, Text, TextInput, FlatList, Image, Linking} from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { connect } from 'react-redux';
 import {withNavigation} from "react-navigation"
@@ -45,27 +45,49 @@ class MainLogInCom extends Component{
                 style={commonStyles.formContainer}
               >
                 <Marker/>
-                <TextInput
-                  style={[styles.element, styles.input]}
-                  onChangeText={(text)=>{
-                    this.props.dispatch({
-                      type: StoreDefine.TYPE_PHONE_NUMBER,
-                      phoneNumber: text
-                    })
-                  }}
-                  placeholder={global.localization.getLang("lang_account")}
-                />
-                <TextInput
-                  style={[styles.element, styles.input]}
-                  onChangeText={(text)=>{
-                    this.props.dispatch({
-                      type: StoreDefine.TYPE_PASSWORD,
-                      password: text
-                    })
-                  }}
-                  placeholder={global.localization.getLang("lang_password")}
-                  secureTextEntry={true}
-                />
+                <View
+                  style={[styles.element, styles.inputContainer]}
+                >
+                  <View style={[styles.imgInputContainer]}>
+                    <Image
+                      source={require("../../../../res/image/authen/user_128_333333.png")}
+                      style={[commonStyles.fullView]}
+                      resizeMode={'contain'}
+                    />
+                  </View>
+                  <TextInput
+                    style={[styles.textInput]}
+                    onChangeText={(text)=>{
+                      this.props.dispatch({
+                        type: StoreDefine.TYPE_PHONE_NUMBER,
+                        phoneNumber: text
+                      })
+                    }}
+                    placeholder={global.localization.getLang("lang_userName")}
+                  />
+                </View>                
+                <View
+                  style={[styles.element, styles.inputContainer]}
+                >
+                  <View style={[styles.imgInputContainer]}>
+                    <Image
+                      source={require("../../../../res/image/authen/password_128_333333.png")}
+                      style={[commonStyles.fullView]}
+                      resizeMode={'contain'}
+                    />
+                  </View>
+                  <TextInput
+                    style={[styles.textInput]}
+                    onChangeText={(text)=>{
+                      this.props.dispatch({
+                        type: StoreDefine.TYPE_PASSWORD,
+                        password: text
+                      })
+                    }}
+                    placeholder={global.localization.getLang("lang_password")}
+                    secureTextEntry={true}
+                  />
+                </View> 
                 <View style={styles.padder}/>
                 <TouchableOpacity
                   style={[styles.element, styles.button]}

@@ -6,6 +6,7 @@ const styles = require("../style/styles").default
 const ImageContainer = require("./ImageSlider").default
 const ContentText = require("./ContentText").default
 const Interation = require("./Interation").default
+const UserHeader = require("../../../../common/component/UserHeader").default
 import { useRoute, useNavigation } from '@react-navigation/native';
 
 import {QuickToast} from "../../../../utils/Toast"
@@ -14,33 +15,8 @@ import {QuickToast} from "../../../../utils/Toast"
 export default function Feed (props){
     navigation = useNavigation()
     return (
-        <View style={[styles.feed]}>
-            <TouchableOpacity 
-                style={[styles.ownerContainer]}
-                onPress={()=>{
-                    // QuickToast.show(props.ownerName)
-                    navigation.navigate("Profile", {_profile: props})
-                }}
-            >
-                <View style={[styles.avatarContainer]}>
-                    <Image style={[styles.ownerAvatar]}
-                        source={require("../../../../../res/image/HomeScreen/user.png")}
-                        resizeMethod={'resize'}
-                    />
-                </View>
-                <View style={[styles.ownerNameContainer]}>
-                    <Text
-                        style={styles.ownerNameTxt}
-                    >
-                        {props.ownerName}
-                    </Text>
-                    <Text
-                        style={styles.postedTimeTxt}
-                    >
-                        {props.postedTime}
-                    </Text>
-                </View>
-            </TouchableOpacity>
+        <View style={[commonStyles.contentContainer]}>
+            <UserHeader {...convertProps(props)}/>
             {
                 props.imageSrc.length > 0 ?
                 <ImageContainer {... {imgsSrc: props.imageSrc}}>
@@ -51,4 +27,12 @@ export default function Feed (props){
             <Interation {...props}/>
         </View>
     )
+}
+
+const convertProps = (props)=>{
+    return {
+        ...props,
+        extrasInfo: props.postedTime,
+        clickable: true
+    }
 }

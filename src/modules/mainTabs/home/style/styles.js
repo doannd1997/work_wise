@@ -4,7 +4,6 @@ const colors = require("../../../../color/Colors").default;
 
 export default (styles = EStyleSheet.create({
   feed: {
-    // height: "240rem",
     backgroundColor: colors.theme,
     alignItems: "center",
     justifyContent: "flex-start",
@@ -83,11 +82,9 @@ export default (styles = EStyleSheet.create({
   },
 
   interationContainer: {
-    // width: "100%",
     marginLeft: "10rem",
     marginRight: "10rem",
-    height: "18rem",
-    // backgroundColor: "red",
+    height: "24rem",
     marginTop: "3rem",
     marginBottom: "3rem",
     alignItems: "center",
@@ -95,32 +92,32 @@ export default (styles = EStyleSheet.create({
     flexDirection: "row"
   },
   likeContainer: {
-    height: "100%",
     flex: 1,
-    flexDirection: "row"
-  },
-  commentContainer: {
-    height: "100%",
-    flex: 1.2,
+    flexDirection: "row",
     justifyContent: "center",
     alignItems: "center"
   },
-  btnLike: {
-    height: "100%",
+  commentContainer: {
     flex: 1.2,
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  btnLike: {
+    height: "15rem",
+    width: "15rem",
     padding: "2rem",
-    paddingBottom: "3.8rem"
   },
   likeCountContainer: {
     height: "100%",
-    flex: 3,
+    // flex: 3,
     backgroundColor: "transparent",
     justifyContent: "flex-start",
     alignItems: "center",
     flexDirection: "row",
   },
   txtLikeCount: {
-    fontWeight: "bold",
+    // fontWeight: "bold",
     color: colors.likeCount,
     fontSize: "8rem"
   }

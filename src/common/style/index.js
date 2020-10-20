@@ -79,14 +79,6 @@ export default (styles = EStyleSheet.create({
     alignItems: "center",
     justifyContent: "center"
   },
-  contentContainer: {
-    flex: 1,
-    width: "100%",
-    height: "100%",
-    backgroundColor: "#efefef",
-    alignItems: "center",
-    justifyContent: "center"
-  },
   toolBarElementContainer: {
     flex: 1,
     height: "100%",
@@ -161,13 +153,6 @@ export default (styles = EStyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     alignSelf: "flex-start"
-  },
-  contentContainer: {
-    justifyContent: "center",
-    alignItems: "center",
-    flex: 1,
-    backgroundColor: "#fff",
-    width: "100%"
   },
   panel: {
     backgroundColor: "#000",
@@ -267,7 +252,7 @@ export default (styles = EStyleSheet.create({
 
   ////
   formContainer: {
-    backgroundColor: "#fff",
+    backgroundColor: colors.theme,
     alignSelf: "center",
     justifyContent: "center",
     alignItems: "center",
@@ -283,5 +268,74 @@ export default (styles = EStyleSheet.create({
     width: "16rem",
     aspectRatio: 1,
     alignItems: "center"
-  }
+  },
+
+  //
+  noPadding: {
+    padding: 0
+  },  
+  noMargin: {
+    margin: 0
+  },
+
+  // content WHITE
+  contentContainer: {
+    backgroundColor: colors.theme,
+    alignItems: "center",
+    justifyContent: "flex-start",
+    margin: "2rem",
+    borderRadius: "4rem",
+    elevation: 1,
+    flexDirection: "column",
+    flex: 1,
+    alignSelf: "stretch"
+  },
+
+  // User Head
+  ownerContainer: {
+    // width: "100%",
+    height: "30rem",
+    flexDirection: "row",
+    justifyContent: "flex-start",
+  },
+  ownerContainerAlone: {
+    backgroundColor: colors.theme3,
+    margin: "2rem",
+    borderRadius: "4rem",
+    elevation: 1,
+  },
+  avatarContainer: {
+    height: "100%",
+    aspectRatio: 1,
+    padding: "2rem",
+    marginLeft: "3rem",
+    justifyContent: "center",
+    alignItems: "center"
+  },
+  ownerAvatar: {
+    width: "25rem",
+    height: "25rem",
+    backgroundColor: "cyan",
+    borderRadius: "40rem",
+  },  
+  ownerNameContainer: {
+    height: "25rem",
+    flex: 1,
+    alignItems: "flex-start",
+    justifyContent: "space-around",
+    flexDirection: "column",
+    paddingLeft: "4rem",
+    alignSelf: "center",
+    paddingBottom: "3rem"
+  },
+  ownerNameTxt: {
+    color: colors.ownerTitle,
+    fontWeight: "bold",
+    fontSize: "7rem"
+  },
+  extrasInfo: {
+    fontWeight: "bold",
+    fontSize: "5rem",
+    color: colors.postedTime
+  },
 }));

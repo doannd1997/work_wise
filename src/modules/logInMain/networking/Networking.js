@@ -1,8 +1,6 @@
 import {networkRequestGet, networkRequestPost, createUrl} from "../../network/NetWork";
 import {QuickToast} from "../../../utils/Toast";
 
-const RegisterNetWorking = require("../../registerService/networking/Networking").default
-
 export default Networking = {
     apiLogIn: function(props, resultCallback){
         var url = createUrl(ROUTE.LOG_IN)
@@ -14,7 +12,6 @@ export default Networking = {
         networkRequestPost(url, params, null, async (responseText, responseHeader)=>{
             if (typeof resultCallback == 'function')
                 resultCallback();
-            console.log("login response", JSON.stringify(responseText))
             var json = JSON.parse(responseText)
             // global.accountData.setAccount(json)
             // global.routeData.setRoute(json.lstRoutes)

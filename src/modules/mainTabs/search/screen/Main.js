@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import {View, Text, Image, SectionList} from "react-native"
+import {View, Text, TextInput, Image, TouchableOpacity} from "react-native"
 import {connect} from "react-redux"
 import DateTimePicker from '@react-native-community/datetimepicker';
 
@@ -16,13 +16,35 @@ class Main extends Component{
         
     }
     render(){
+        let _this = this
         return (
             <View style={[commonStyles.fullView, styles.profileContainer]}>
                 <ToolBar params={{title: "lang_search"}}/>
                 <View style={[styles.searchContainer]}>
-                    
+                    <TextInput 
+                        style={[styles.inputText]}
+                        multiline={true}
+                        placeholder={'   ......'}
+                        onChangeText={(text)=>{
+                            _this.props.dispatch({type: ACTION_TYPE.TYPE_COMMENT, comment: text})
+                        }}
+                        value={_this.props.comment}
+                    />
+                    <TouchableOpacity 
+                        style={[styles.btnSearch]}
+                        onPress={()=>{
+                           
+                        }}
+                    >
+                        <Image
+                            source={require("../../../../../res/image/search/search_128_231_83_72.png")}
+                            resizeMode={"contain"}
+                            resizeMethod={"resize"}
+                            style={[commonStyles.fullView]}
+                        />
+                    </TouchableOpacity>
                 </View>
-                <View style={[styles.feedContainer]}>
+                <View style={[styles.ownerContainer]}>
 
                 </View>
             </View>
@@ -32,7 +54,7 @@ class Main extends Component{
 
 const mapStateToProps = (state)=>{
     return {
-        curTab: state.curTab
+
     }
 }
 
